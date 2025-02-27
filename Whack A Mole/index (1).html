@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="settings">
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <select id="theme">
+                <option value="default">Default Theme</option>
+                <option value="night">Night Theme</option>
+                <option value="garden">Garden Theme</option>
+            </select>
+            <button id="startGame">Start Game</button>
+            <button id="startMultiplayer">Start Multiplayer</button>
+        </div>
+
+        <div class="timer">Time: <span id="time">60</span></div>
+
+        <div class="multiplayer-scores">
+            <div class="player-score">Player 1: <span id="score1">0</span></div>
+            <div class="player-score">Player 2: <span id="score2">0</span></div>
+        </div>
+
+        <div class="grid">
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+            <div class="hole"><div class="mole"></div></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
